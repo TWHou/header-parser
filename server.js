@@ -12,6 +12,6 @@ app.get('/api/whoami', function (req, res) {
   var output = { ip: ip, language: lang, software: os };
   res.json(output);
 });
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
+app.listen(process.env.PORT || 8080, function () {
+  console.log('Node.js listening on port ' + process.env.PORT);
 });
